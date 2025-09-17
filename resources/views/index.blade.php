@@ -13,9 +13,9 @@
   <!-- Fila con botones alineados a la derecha -->
   <div class="row mb-3">
     <div class="col text-end">
-      <button type="button" class="btn btn-primary">Botón 1</button>
-      <button type="button" class="btn btn-secondary">Botón 2</button>
-      <button type="button" class="btn btn-success">Botón 3</button>
+      <button type="button" class="btn btn-primary">inicio</button>
+      <button type="button" class="btn btn-secondary">tabla</button>
+      <button type="button" class="btn btn-success">formulario</button>
     </div>
   </div>
 
@@ -45,6 +45,40 @@
   </div>
 </div>
 
+<div class="container mt-4">
+  <div class="row text-center">
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">sensores en linea</h5>
+          <p class="card-text">3</p>
+          <p class="card-text">demo</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text">Pequeña información resumida.</p>
+          <p class="card-text">HACE 2 MIN</p>
+          <p class="card-text">SIMULADA PARA LA DEMO</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Ultima sincronizacion</h5>
+          <p class="card-text">MYSQL.</p>
+          <p class="card-text">conectado via MYSQL</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 @endsection 
