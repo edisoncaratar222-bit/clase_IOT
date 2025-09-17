@@ -32,6 +32,19 @@
     </div>
   </div>
 </div>
+<div class="container text-center mt-5">
+  <!-- Caja blanca centrada -->
+  <div class="card mx-auto shadow" style="max-width: 400px; background: white;">
+    <div class="card-body">
+      <h5 class="card-title mb-3"><img src="imagen1.jpg" alt=""></h5>
+      <form>
+        <input type="file" class="form-control mb-3" accept="image/*">
+        <button type="submit" class="btn btn-primary w-100">Cargar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
 
 
 @endsection 
