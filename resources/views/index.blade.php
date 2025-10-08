@@ -79,6 +79,39 @@
     </div>
   </div>
 </div>
+<div class="container my-4">
+  <h3>Estamos aquí</h3>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!..." 
+    width="100%" height="300" style="border:0;" 
+    allowfullscreen="" loading="lazy">
+  </iframe>
+</div>
+<!-- Botón para abrir -->
+<button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#miModal">
+  Abrir modal
+</button>
+<div>
+<img src="resources/img/imagen1.jpg" alt="">
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="miModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Título del modal</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        esta es una imagen
+        <img src="" alt="">
+            <img src="resources/img/imagen1.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 @endsection 
