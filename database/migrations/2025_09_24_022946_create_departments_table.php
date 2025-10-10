@@ -8,14 +8,19 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('departments', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->foreignId('country_id')->constrained('countries')->onDelete('cascade');
-            $table->boolean('status')->default(true);
-            $table->timestamps();
-            $table->softDeletes();
-        });
+        Schema::create('departments', function (Blueprint $t) {
+  $t->id();
+  $t->string('name');
+  $t->string('code')->nullable();
+  $t->string('abbrev',10)->nullable();
+  $t->boolean('status')->default(true);
+  $t->foreignId('id_country')->constrained('countries');
+  $t->timestamps();
+  $t->softDeletes();
+});
+
+
+
     }
 
     public function down()

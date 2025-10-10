@@ -13,10 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('contactos', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+       Schema::create('cities', function (Blueprint $t) {
+  $t->id();
+  $t->string('name');
+  $t->string('code')->nullable();
+  $t->string('abbrev',10)->nullable();
+  $t->boolean('status')->default(true);
+  $t->foreignId('id_department')->constrained('departments');
+  $t->timestamps();
+  $t->softDeletes();
+});
+
     }
 
     /**

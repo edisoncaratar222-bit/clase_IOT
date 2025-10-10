@@ -13,15 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('failed_jobs', function (Blueprint $table) {
-            $table->id();
-            $table->string('uuid')->unique();
-            $table->text('connection');
-            $table->text('queue');
-            $table->longText('payload');
-            $table->longText('exception');
-            $table->timestamp('failed_at')->useCurrent();
-        });
+        Schema::create('sensors', function (Blueprint $t) {
+  $t->id();
+  $t->string('name');
+  $t->string('code')->unique();
+  $t->string('abbrev',20)->nullable();
+  $t->boolean('status')->default(true);
+  $t->foreignId('id_department')->constrained('departments');
+  $t->timestamps();
+  $t->softDeletes();
+});
+
     }
 
     /**

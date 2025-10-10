@@ -8,15 +8,16 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('countries', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('code')->nullable();
-            $table->string('abbrev')->nullable();
-            $table->boolean('status')->default(true);
-            $table->timestamps();
-            $table->softDeletes();
-        });
+     Schema::create('countries', function (Blueprint $t) {
+  $t->id();
+  $t->string('name');
+  $t->string('code')->nullable();
+  $t->string('abbrev',10)->nullable();
+  $t->boolean('status')->default(true);
+  $t->timestamps();
+  $t->softDeletes();
+});
+
     }
 
     public function down()

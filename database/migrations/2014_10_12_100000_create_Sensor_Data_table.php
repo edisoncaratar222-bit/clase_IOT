@@ -13,11 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('password_resets', function (Blueprint $table) {
-            $table->string('email')->primary();
-            $table->string('token');
-            $table->timestamp('created_at')->nullable();
-        });
+       Schema::create('sensor_data', function (Blueprint $t) {
+  $t->id();
+  $t->foreignId('id_sensor')->constrained('sensors');
+  $t->foreignId('id_station')->constrained('stations');
+  $t->float('temp_value')->nullable();
+  $t->float('humidity')->nullable();
+  $t->boolean('status')->default(true);
+  $t->timestamps();
+  $t->softDeletes();
+});
+
     }
 
     /**
